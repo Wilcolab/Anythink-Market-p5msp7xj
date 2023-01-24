@@ -10,16 +10,20 @@ import { ConnectedRouter } from "react-router-redux";
 
 import App from "./components/App";
 import { ThemeProvider } from "styled-components";
+import GlobalStyle from "./styles/GlobalStyle";
+
 
 ReactDOM.render(
   
   <Provider store={store}>
     <ThemeProvider theme={theme}>
+      <GlobalStyle>
       <ConnectedRouter history={history}>
         <Switch>
           <Route path="/" component={App} />
         </Switch>
       </ConnectedRouter>
+      </GlobalStyle>
     </ThemeProvider>
   </Provider>,
 
